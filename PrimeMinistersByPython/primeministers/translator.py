@@ -26,3 +26,4 @@ class Translator(object):
 	def table(self):
 		"""総理大臣のCSVファイルを基にしたテーブルから、HTMLページを基にするテーブルに変換して、それを応答する。"""
 		return None
+

@@ -23,3 +23,4 @@ class Attributes(object):
 	def set_names(self, names):
 		"""名前群を設定する。"""
 		return
+

@@ -13,3 +13,4 @@ class IO(object):
 	def write_csv(self, filename, rows):
 		"""指定されたファイルにCSVとして行たち(rows)を書き出す。"""
 		return
+

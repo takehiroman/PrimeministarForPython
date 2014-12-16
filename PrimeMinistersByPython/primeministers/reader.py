@@ -15,3 +15,4 @@ class Reader(io.IO):
 	def table(self):
 		"""ダウンロードしたCSVファイルを読み込んでテーブルを応答する。"""
 		return None
+
