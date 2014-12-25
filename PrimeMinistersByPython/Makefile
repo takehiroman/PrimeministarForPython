@@ -1,8 +1,8 @@
 PYCS	:= $(shell find . -name "*.pyc")
-NAME	= PrimePython
+NAME	= PrimeMinistersByPython
 TARGET	= PrimeMinisters.py
 PACKAGE	= primeministers
-
+INSTDIR	= PrimeMinisters.app/Contents/Resources/Python/
 
 all:
 	rm -rf ~/Desktop/SouriDaijin

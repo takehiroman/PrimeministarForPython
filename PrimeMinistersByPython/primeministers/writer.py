@@ -29,6 +29,18 @@ class Writer(io.IO):
 
 	def write_body(self, file):
 		"""ボディを書き出す。つまり、属性リストを書き出し、タプル群を書き出す。"""
+		file.write("\t\t\t\t\t\t<tr>\n")
+		for i in self._table.attributes().keys():
+			file.write("\t\t\t\t\t\t\t<td class=\"center-pink\"><strong>" + i + "</strong></td>\n")
+		file.write("\t\t\t\t\t\t<tr>\n")
+		for No,a_tuple in enumerate(self._table.tuples()):
+			file.write("\t\t\t\t\t\t<tr>\n");
+			for n in a_tuple.values:
+				if No % 2 == 0:
+					file.write("\t\t\t\t\t\t\t<td class=\"center-blue\">" + n + "</td>\n");
+				else:
+					file.write("\t\t\t\t\t\t\t<td class=\"center-yellow\">" + n + "</td>\n");
+			file.write("\t\t\t\t\t\t</tr>\n");
 		return
 
 	def write_footer(self, file):

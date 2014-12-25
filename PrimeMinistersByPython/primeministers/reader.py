@@ -10,9 +10,14 @@ class Reader(io.IO):
 
 	def __init__(self, csv_filename):
 		"""リーダのコンストラクタ。"""
+		self.csv_filename=csv_filename
 		return
 
 	def table(self):
 		"""ダウンロードしたCSVファイルを読み込んでテーブルを応答する。"""
-		return None
-
+		list_reader=io.IO().read_csv(self.csv_filename)
+		input_table = table.Table('input')
+		for n in list_reader:
+			a_tuple = tuple.Tuple(input_table.attributes(), n)
+			input_table.add(a_tuple)
+		return input_table

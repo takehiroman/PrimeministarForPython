@@ -6,20 +6,25 @@ class Tuple(object):
 
 	def __init__(self, attributes, values):
 		"""属性リストと値リストからタプルを作るコンストラクタ。"""
+		self.attributes = attributes
+		self.values = values
+		self.dic = dict(zip(attributes.keys(), values))
 		return
 
 	def __str__(self):
+		s ='[' + ','.join(self.values)+']'
 		"""自分自身を文字列にして、それを応答する。"""
-		return None
+		return s
 
 	def attributes(self):
 		"""属性リストを応答する。"""
-		return None
+		return self.attributes
 
 	def values(self):
 		"""値リストを応答する。"""
-		return None
+		return self.values
 
 	def set_values(self, values):
 		"""値リストを設定する。"""
+		self.values =values
 		return
